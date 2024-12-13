@@ -12,3 +12,9 @@ Proyek ini adalah WebGIS interaktif untuk memantau cuaca di Kota Bengkulu. Aplik
 - **Index.html**: Halaman utama yang menampilkan peta interaktif dan data cuaca.
 - **Script.js**: File JavaScript untuk peta interaktif menggunakan Leaflet.
 - **Style.css**: File CSS untuk pengaturan gaya halaman.
+
+## Cara Menggunakan
+1. Clone repositori ini:
+   ```bash
+   git clone https://github.com/username/WEBGIS_Pemantauan-cuaca-Kota-Bengkulu.git
+
