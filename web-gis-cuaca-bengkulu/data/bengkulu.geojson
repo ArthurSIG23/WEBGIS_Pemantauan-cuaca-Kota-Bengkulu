@@ -1,0 +1,33 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Provinsi Bengkulu"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [102.1600, -3.7900],
+            [102.2700, -3.7900],
+            [102.2700, -3.7100],
+            [102.1600, -3.7100],
+            [102.1600, -3.7900]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Titik Cuaca"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [102.26554, -3.80044]
+      }
+    }
+  ]
+}

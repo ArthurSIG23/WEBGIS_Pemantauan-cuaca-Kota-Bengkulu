@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Web GIS Pemantauan Cuaca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Login</h1>
+    </header>
+
+    <div class="login-container">
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Belum punya akun? <a href="register.html">Daftar di sini</a></p> <!-- Tautan untuk mendaftar -->
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Pemantauan Cuaca Bengkulu | Powered by OpenWeather</p>
+    </footer>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Cek kredensial (ini hanya contoh, seharusnya menggunakan metode yang lebih aman)
+            if (username === 'admin' && password === 'password') {
+                // Jika berhasil, alihkan ke halaman utama
+                window.location.href = 'index.html';
+            } else {
+                alert('Username atau password salah!');
+            }
+        });
+    </script>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Cek kredensial dari localStorage
+            const storedUsername = localStorage.getItem('username');
+            const storedPassword = localStorage.getItem('password');
+
+            if (username === storedUsername && password === storedPassword) {
+                // Jika berhasil, alihkan ke halaman utama
+                sessionStorage.setItem('loggedIn', 'true'); // Simpan status login
+                window.location.href = 'index.html';
+            } else {
+                alert('Username atau password salah!');
+            }
+        });
+    </script>
+
+    <style>
+        .login-container {
+            max-width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #005b96;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004080;
+        }
+    </style>
+</body>
+
+</html>
